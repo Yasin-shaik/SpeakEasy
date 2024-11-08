@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="www.google.com">
+          <Link className="navbar-brand" to="/">
             Navbar
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,54 +22,50 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="www.google.com"
-                >
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="www.google.com">
-                  Link
-                </a>
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="www.google.com"
+                  to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Dropdown
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="/">
                       Action
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="/">
                       Another action
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="www.google.com">
+                    <Link className="dropdown-item" to="/">
                       Something else here
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="www.google.com" aria-disabled="true">
+                <Link className="nav-link disabled" to="/" aria-disabled="true">
                   Disabled
-                </a>
+                </Link>
               </li>
             </ul>
             <form className="d-flex" role="search">
